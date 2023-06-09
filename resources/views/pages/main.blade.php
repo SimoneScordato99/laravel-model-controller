@@ -1,7 +1,9 @@
-@extends ('welcome')
+@extends('layout.welcome')
 
 @section('content')
 
-<h1>sono il main</h1>
+    @foreach( $movies as $elem )
+        <h2>{{ $elem['title'] }}</h2>
+    @endforeach
 
 @endsection
